@@ -1,0 +1,83 @@
+require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+  TargetRubyVersion: 2.6
+
+Rails:
+  Enabled: true
+
+Layout/ExtraSpacing:
+  Exclude:
+    - "db/migrate/*.rb"
+
+Layout/AlignParameters:
+  Exclude:
+    - "db/fixtures/**/*"
+
+Layout/ClosingParenthesisIndentation:
+  Exclude:
+    - "db/fixtures/**/*"
+
+Layout/MultilineMethodCallBraceLayout:
+  Exclude:
+    - "db/fixtures/**/*"
+
+Layout/IndentationConsistency:
+  EnforcedStyle: rails
+
+Style/BracesAroundHashParameters:
+  Exclude:
+    - "db/fixtures/**/*"
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+Style/Documentation:
+  Enabled: false
+
+Style/MixinUsage:
+  Exclude:
+    - "bin/setup"
+    - "bin/update"
+
+Metrics/AbcSize:
+  Max: 15
+
+Metrics/LineLength:
+  Max: 100
+  Exclude:
+    - "config/environments/*.rb"
+    - "db/migrate/*.rb"
+    - "db/fixtures/**/*"
+    - "db/seeds.rb"
+    - "config/initializers/devise.rb"
+    - "config/initializers/simple_form_bootstrap.rb"
+    - "config/initializers/simple_form.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - "lib/tasks/**/*"
+    - "config/routes.rb"
+    - "config/environments/*.rb"
+    - "config/initializers/devise.rb"
+    - "config/initializers/simple_form_bootstrap.rb"
+    - "spec/**/*"
+
+Metrics/MethodLength:
+  Enabled: false
+
+Bundler/OrderedGems:
+  TreatCommentsAsGroupSeparators: true
+
+Rails/NotNullColumn:
+  Exclude:
+    - "db/migrate/*.rb"
