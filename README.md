@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## Code Status
+[![CircleCI](https://circleci.com/gh/kseki/happinas/tree/master.svg?style=svg)](https://circleci.com/gh/kseki/happinas/tree/master)
+
