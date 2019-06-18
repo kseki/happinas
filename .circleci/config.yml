@@ -50,3 +50,6 @@ jobs:
           name: Rubocop style check
           command: bundle exec rubocop --display-cop-names
 
+      - run:
+          name: Check application for security vulnerabilities
+          command: bundle exec brakeman
