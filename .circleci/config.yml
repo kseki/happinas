@@ -39,6 +39,14 @@ jobs:
             - vendor/bundle
 
       - run:
+          name: Update ruby-advisory-db
+          command: bundle exec bundler-audit update
+
+      - run:
+          name: Patch-level verification for bundler
+          command: bundle exec bundler-audit
+
+      - run:
           name: Rubocop style check
           command: bundle exec rubocop --display-cop-names
 
