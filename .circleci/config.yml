@@ -53,3 +53,10 @@ jobs:
       - run:
           name: Check application for security vulnerabilities
           command: bundle exec brakeman
+
+      - run:
+          name: Code quality report
+          command: bundle exec rubycritic --no-browser --minimum-score 100 --path /tmp/rubycritic/rubycritic.html app lib
+
+      - store_artifacts:
+          path: /tmp/rubycritic

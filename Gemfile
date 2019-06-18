@@ -38,6 +38,7 @@ group :development, :test do
   gem 'brakeman', '~> 4.5', require: false
   gem 'bundle-audit', '~> 0.1.0'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rubycritic', '~> 4.1', require: false
 end
 
 group :development do
