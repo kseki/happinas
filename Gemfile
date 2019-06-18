@@ -17,8 +17,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'webpacker'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-gem 'rubocop', '~> 0.71.0'
-gem 'rubocop-rails', '~> 2.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -38,7 +36,15 @@ group :development, :test do
   gem 'brakeman', '~> 4.5', require: false
   gem 'bundle-audit', '~> 0.1.0'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'capybara', '~> 3.24'
+  gem 'factory_bot_rails', '~> 5.0'
+  gem 'rspec-rails', '~> 3.8'
+  gem 'rubocop', '~> 0.71.0', require: false
+  gem 'rubocop-rails', '~> 2.0', require: false
+  gem 'rubocop-rspec', '~> 1.33', require: false
   gem 'rubycritic', '~> 4.1', require: false
+  gem 'selenium-webdriver', '~> 3.142'
+  gem 'webdrivers', '~> 4.0'
 end
 
 group :development do
