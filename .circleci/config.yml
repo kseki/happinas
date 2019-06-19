@@ -7,6 +7,12 @@ jobs:
         environment:
           BUNDLER_VERSION: 2.0.1
           RAILS_ENV: test
+          DATABASE_USER: postgres
+      - image: postgres:11
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: password
+
     steps:
       - checkout
 
@@ -57,6 +63,12 @@ jobs:
       - run:
           name: Code quality report
           command: bundle exec rubycritic --no-browser --minimum-score 100 --path /tmp/rubycritic/rubycritic.html app lib
+
+      - run:
+           name: Database Setup
+           command: |
+             bundle exec rake db:create
+             bundle exec rake db:schema:load
 
       - store_artifacts:
           path: /tmp/rubycritic
