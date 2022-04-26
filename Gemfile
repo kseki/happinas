@@ -18,8 +18,9 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 group :development, :test do
-  gem 'capybara'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+
+  gem 'capybara'
   gem 'factory_bot_rails'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
@@ -28,11 +29,14 @@ group :development, :test do
 end
 
 group :development do
-  gem 'brakeman'
   gem 'rack-mini-profiler'
+  gem 'web-console'
+
+  gem 'brakeman'
+  gem 'bundler-audit'
+
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
-  gem 'web-console'
 end
