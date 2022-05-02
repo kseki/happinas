@@ -63,6 +63,10 @@ Layout/ClassStructure:
 Layout/TrailingWhitespace:
   AllowInHeredoc: true
 
+Layout/LineLength:
+  Exclude:
+    - 'config/initializers/devise.rb'
+
 Lint/AmbiguousBlockAssociation:
   Exclude:
     - 'spec/**/*.rb'
