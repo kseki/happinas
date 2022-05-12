@@ -7,6 +7,8 @@ ruby '3.1.2'
 
 gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 
+gem 'devise'
+gem 'devise_invitable'
 gem 'importmap-rails'
 gem 'sprockets-rails'
 gem 'sqlite3', '~> 1.4'
