@@ -80,6 +80,10 @@ Lint/UselessAccessModifier:
     - 'def_matcher'
     - 'def_node_matcher'
 
+Metrics/AbcSize:
+  Exclude:
+    - 'db/migrate/*.rb'
+
 Metrics/BlockLength:
   Exclude:
     - 'Rakefile'
@@ -91,9 +95,14 @@ Naming/FileName:
   Exclude:
     - lib/rubocop-rails.rb
 
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/*.rb'
+
 Metrics/ModuleLength:
   Exclude:
     - 'spec/**/*.rb'
+
 
 Performance/DeletePrefix:
   SafeMultiline: false
